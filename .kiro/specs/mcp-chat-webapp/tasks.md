@@ -2,16 +2,16 @@
 
 ## フェーズ1: 設定・基盤
 
-- [ ] 1.1 McpConfig クラスの実装
+- [x] 1.1 McpConfig クラスの実装
   - `@ConfigurationProperties(prefix = "mcp.server")` を使用
   - `url`（必須）、`connectionTimeout`（デフォルト5000）、`readTimeout`（デフォルト30000）フィールド
   - `@Validated` + `@NotBlank` でURL未設定時の起動中断
   - パッケージ: `com.github.miyohide.mymcp.config`
 
-- [ ] 1.2 application.properties へのMCP設定追加
+- [x] 1.2 application.properties へのMCP設定追加
   - `mcp.server.url`、`mcp.server.connection-timeout`、`mcp.server.read-timeout` を追記
 
-- [ ] 1.3 カスタム例外クラスの実装
+- [x] 1.3 カスタム例外クラスの実装
   - `McpException`（基底）
   - `McpTimeoutException`
   - `McpConnectionException`
