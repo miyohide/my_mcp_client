@@ -17,7 +17,7 @@
   - `McpConnectionException`
   - パッケージ: `com.github.miyohide.mymcp.exception`
 
-- [ ] 1.4 build.gradle への依存関係追加
+- [ ]* 1.4 build.gradle への依存関係追加
   - jqwik（プロパティベーステスト用）: `net.jqwik:jqwik:1.9.0`
 
 ## フェーズ2: データモデル・セッション
@@ -86,7 +86,7 @@
   - `clear()` 後にリストが空になることを確認（要件6.5）
   - 複数セッションの独立性確認（要件6.1）
 
-- [ ] 6.3 ChatSession のプロパティテスト
+- [ ]* 6.3 ChatSession のプロパティテスト
   - `// Feature: mcp-chat-webapp, Property 1: メッセージ追加後の会話履歴順序保持`
   - 任意のメッセージリストに対して追加順と取得順が一致することを確認（要件1.5, 6.2, 6.4）
 
@@ -97,7 +97,7 @@
   - タイムアウト時の特定メッセージ表示（エッジケース: 要件5.2）
   - 接続不可時の特定メッセージ表示（エッジケース: 要件5.3）
 
-- [ ] 6.5 ChatController のプロパティテスト
+- [ ]* 6.5 ChatController のプロパティテスト
   - `// Feature: mcp-chat-webapp, Property 2: 空・空白メッセージの拒否`
   - 任意の空白のみ文字列でサービスが呼ばれないことを確認（要件2.5）
   - `// Feature: mcp-chat-webapp, Property 3: 応答のChatSessionへの追加`
@@ -110,12 +110,12 @@
   - 接続失敗時の例外スロー確認（エッジケース: 要件4.5）
   - エラーレスポンス時の例外スロー確認（エッジケース: 要件4.6）
 
-- [ ] 6.7 McpClientService のプロパティテスト
+- [ ]* 6.7 McpClientService のプロパティテスト
   - `// Feature: mcp-chat-webapp, Property 5: JSON-RPC 2.0形式のリクエスト送信`
   - 任意のメッセージに対してJSON-RPC 2.0形式のリクエストが生成されることを確認（要件4.1, 4.3）
   - `// Feature: mcp-chat-webapp, Property 6: MCPレスポンスのテキスト変換`
   - 任意のMCPレスポンスに対してcontent[].textが正しく結合されることを確認（要件4.4）
 
-- [ ] 6.8 Thymeleafテンプレートのプロパティテスト
+- [ ]* 6.8 Thymeleafテンプレートのプロパティテスト
   - `// Feature: mcp-chat-webapp, Property 4: ユーザーメッセージとボット応答の視覚的区別`
   - 任意のChatMessageリストに対してユーザー/ボットが異なるCSSクラスで表示されることを確認（要件2.4, 7.5）
