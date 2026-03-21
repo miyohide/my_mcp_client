@@ -56,9 +56,9 @@ public class McpClientService {
 
     public String sendMessage(String message) {
         ObjectNode params = objectMapper.createObjectNode();
-        params.put("name", "chat");
+        params.put("name", "aws___search_documentation");
         ObjectNode arguments = objectMapper.createObjectNode();
-        arguments.put("message", message);
+        arguments.put("search_phrase", message);
         params.set("arguments", arguments);
 
         String requestBody = buildRequest("tools/call", params, idCounter.getAndIncrement());
