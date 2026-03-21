@@ -59,7 +59,7 @@
 
 ## フェーズ5: Thymeleafテンプレート
 
-- [ ] 5.1 chat.html の実装
+- [x] 5.1 chat.html の実装
   - メッセージ入力フォーム（`<form method="post" action="/chat">`）
   - 送信ボタン
   - 会話履歴エリア（ユーザー/ボットを異なるCSSクラスで区別）
@@ -67,7 +67,7 @@
   - 新しいメッセージが下に表示される順序
   - パス: `src/main/resources/templates/chat.html`
 
-- [ ] 5.2 静的リソース（CSS/JS）の実装
+- [x] 5.2 静的リソース（CSS/JS）の実装
   - `src/main/resources/static/css/chat.css`: ユーザー/ボットのスタイル定義
   - `src/main/resources/static/js/chat.js`:
     - Enterキーでフォーム送信

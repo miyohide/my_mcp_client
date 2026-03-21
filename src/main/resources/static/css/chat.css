@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+/* 会話履歴エリア */
+.chat-history {
+    height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #fafafa;
+}
+
+.empty-history {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* メッセージペア */
+.message-pair {
+    margin-bottom: 16px;
+}
+
+/* ラベル共通 */
+.message-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+/* ユーザーメッセージ（右寄せ・青系） */
+.user-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.user-message .message-label {
+    text-align: right;
+    color: #1a6bbf;
+}
+
+.user-message p {
+    background-color: #1a6bbf;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 12px 12px 2px 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* ボット応答（左寄せ・グレー系） */
+.bot-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bot-message .message-label {
+    color: #555;
+}
+
+.bot-message p {
+    background-color: #e8e8e8;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 12px 12px 12px 2px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* エラーメッセージ（赤系） */
+.bot-message.error-message p {
+    background-color: #fde8e8;
+    color: #c0392b;
+    border: 1px solid #f5c6c6;
+}
+
+/* 入力フォーム */
+.message-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.message-form input[type="text"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.message-form input[type="text"]:focus {
+    border-color: #1a6bbf;
+}
+
+.message-form button {
+    padding: 10px 20px;
+    background-color: #1a6bbf;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.message-form button:hover:not(:disabled) {
+    background-color: #155a9e;
+}
+
+.message-form button:disabled {
+    background-color: #a0b8d8;
+    cursor: not-allowed;
+}
+
+/* 履歴クリアフォーム */
+.clear-form {
+    text-align: right;
+}
+
+.clear-button {
+    padding: 6px 14px;
+    background-color: transparent;
+    color: #888;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.clear-button:hover {
+    background-color: #f0f0f0;
+    color: #555;
+}

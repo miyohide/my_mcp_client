@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCPチャット</title>
+    <link rel="stylesheet" th:href="@{/css/chat.css}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>MCPチャット</h1>
+
+        <div id="chat-history" class="chat-history">
+            <div th:if="${#lists.isEmpty(messages)}" class="empty-history">
+                <p>会話履歴はありません。メッセージを入力して会話を始めてください。</p>
+            </div>
+            <div th:each="msg : ${messages}" class="message-pair">
+                <div class="user-message">
+                    <span class="message-label">あなた</span>
+                    <p th:text="${msg.userMessage}"></p>
+                </div>
+                <div th:classappend="${msg.error} ? 'error-message'" class="bot-message">
+                    <span class="message-label">MCP</span>
+                    <p th:text="${msg.botResponse}"></p>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" th:action="@{/chat}" class="message-form">
+            <input
+                type="text"
+                id="message-input"
+                name="message"
+                placeholder="メッセージを入力してください"
+                autocomplete="off"
+                autofocus
+            >
+            <button type="submit" id="send-button">送信</button>
+        </form>
+
+        <form method="post" th:action="@{/chat/clear}" class="clear-form">
+            <button type="submit" class="clear-button">履歴をクリア</button>
+        </form>
+    </div>
+
+    <script th:src="@{/js/chat.js}"></script>
+</body>
+</html>
