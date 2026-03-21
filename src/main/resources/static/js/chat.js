@@ -13,17 +13,6 @@
         }
     }
 
-    // Enterキーでフォーム送信（Shift+Enterは無視）
-    function handleKeyDown(event) {
-        if (event.key === 'Enter' && !event.shiftKey) {
-            event.preventDefault();
-            if (messageForm && !sendButton.disabled) {
-                sendButton.disabled = true;
-                messageForm.submit();
-            }
-        }
-    }
-
     // フォーム送信時に送信ボタンを無効化
     function handleFormSubmit() {
         if (sendButton) {
@@ -36,7 +25,6 @@
 
     if (messageInput) {
         messageInput.focus();
-        messageInput.addEventListener('keydown', handleKeyDown);
     }
 
     if (messageForm) {
