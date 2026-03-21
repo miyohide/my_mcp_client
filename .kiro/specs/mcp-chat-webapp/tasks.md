@@ -36,7 +36,7 @@
 
 ## フェーズ3: MCPクライアントサービス
 
-- [ ] 3.1 McpClientService の実装
+- [x] 3.1 McpClientService の実装
   - `@Service` アノテーション
   - `@PostConstruct` で `initialize` リクエスト送信
   - `sendMessage(String message)` メソッド（`tools/call` 呼び出し）
