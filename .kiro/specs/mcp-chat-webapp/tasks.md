@@ -49,7 +49,7 @@
 
 ## フェーズ4: コントローラー
 
-- [ ] 4.1 ChatController の実装
+- [x] 4.1 ChatController の実装
   - `GET /chat` → チャット画面表示
   - `POST /chat` → メッセージ送信・応答表示
     - 空・空白メッセージは送信せずに再表示
