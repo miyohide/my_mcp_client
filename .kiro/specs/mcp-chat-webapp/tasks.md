@@ -22,11 +22,11 @@
 
 ## フェーズ2: データモデル・セッション
 
-- [ ] 2.1 ChatMessage レコードの実装
+- [x] 2.1 ChatMessage レコードの実装
   - フィールド: `userMessage`、`botResponse`、`timestamp`、`isError`
   - パッケージ: `com.github.miyohide.mymcp.model`
 
-- [ ] 2.2 ChatSession コンポーネントの実装
+- [x] 2.2 ChatSession コンポーネントの実装
   - `@Component` + `@SessionScope`
   - `addMessage(String userMessage, String botResponse)` メソッド
   - `addErrorMessage(String userMessage, String errorMessage)` メソッド
