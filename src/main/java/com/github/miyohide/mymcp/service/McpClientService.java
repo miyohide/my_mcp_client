@@ -5,8 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatModel;
-import org.springframework.ai.mcp.SyncMcpToolCallbackProvider;
 import org.springframework.ai.tool.ToolCallback;
+import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.stereotype.Service;
 
 /**
@@ -28,7 +28,7 @@ public class McpClientService {
 
     private final ChatClient chatClient;
 
-    public McpClientService(ChatModel chatModel, SyncMcpToolCallbackProvider toolCallbackProvider) {
+    public McpClientService(ChatModel chatModel, ToolCallbackProvider toolCallbackProvider) {
         // MCP サーバーから発見したツールを ChatClient に登録
         ToolCallback[] tools = toolCallbackProvider.getToolCallbacks();
         this.chatClient = ChatClient.builder(chatModel)
