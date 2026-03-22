@@ -32,7 +32,7 @@ public class McpClientService {
         // MCP サーバーから発見したツールを ChatClient に登録
         ToolCallback[] tools = toolCallbackProvider.getToolCallbacks();
         this.chatClient = ChatClient.builder(chatModel)
-                .defaultTools((Object[]) tools)
+                .defaultToolCallbacks(tools)
                 .build();
         log.info("MCPクライアントサービスを初期化しました。利用可能なツール数: {}",
                 toolCallbackProvider.getToolCallbacks().length);
