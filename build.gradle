@@ -33,7 +33,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
 	// Spring AI BOM
-	implementation platform('org.springframework.ai:spring-ai-bom:1.0.0')
+	implementation platform('org.springframework.ai:spring-ai-bom:1.1.3')
 
 	// Spring AI MCP クライアントスターター（ツール発見・呼び出し）
 	implementation 'org.springframework.ai:spring-ai-starter-mcp-client'
